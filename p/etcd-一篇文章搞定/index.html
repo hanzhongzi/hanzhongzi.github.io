@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='ETCD 原理、安装部署、操作'>
 <title>Etcd 一篇文章搞定</title>
@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Etcd 一篇文章搞定'>
 <meta property='og:description' content='ETCD 原理、安装部署、操作'>
 <meta property='og:url' content='https://hanzhongzi.github.io/p/etcd-%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E6%90%9E%E5%AE%9A/'>
-<meta property='og:site_name' content='Hugo Theme Stack Starter'>
+<meta property='og:site_name' content='瀚中子的个人网站'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='etcd' /><meta property='article:published_time' content='2024-01-02T16:55:17&#43;08:00'/><meta property='article:modified_time' content='2024-01-02T16:55:17&#43;08:00'/>
 <meta name="twitter:title" content="Etcd 一篇文章搞定">
 <meta name="twitter:description" content="ETCD 原理、安装部署、操作">
@@ -71,7 +71,7 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Hugo Theme Stack Starter</a></h1>
+            <h1 class="site-name"><a href="/">瀚中子的个人网站</a></h1>
             <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
         </div>
     </header><ol class="social-menu">
@@ -199,6 +199,27 @@
         
 
         <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://hanzhongzi.github.io/" selected>中文</option>
+                        
+                            <option value="https://hanzhongzi.github.io/en/" >English</option>
+                        
+                    </select>
+                </li>
+            
             
             
                 <li id="dark-mode-toggle">
@@ -1926,7 +1947,7 @@ minTTLSec := int64(math.Ceil(minTTL.Seconds()))
         
             2020 - 
         
-        2024 Hugo Theme Stack Starter
+        2024 hanzhongzi
     </section>
     
     <section class="powerby">

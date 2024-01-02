@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Example Category on Hugo Theme Stack Starter</title>
+        <title>Example Category on 瀚中子的个人网站</title>
         <link>https://hanzhongzi.github.io/categories/example-category/</link>
-        <description>Recent content in Example Category on Hugo Theme Stack Starter</description>
+        <description>Recent content in Example Category on 瀚中子的个人网站</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="https://hanzhongzi.github.io/categories/example-category/index.xml" rel="self" type="application/rss+xml" />
+        <language>zh-cn</language>
+        <copyright>hanzhongzi</copyright><atom:link href="https://hanzhongzi.github.io/categories/example-category/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
