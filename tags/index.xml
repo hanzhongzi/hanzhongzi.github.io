@@ -6,44 +6,28 @@
         <description>Recent content in Tags on Hugo Theme Stack Starter</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 07 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hanzhongzi.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>css</title>
-        <link>https://hanzhongzi.github.io/tags/css/</link>
-        <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+        <lastBuildDate>Tue, 02 Jan 2024 16:55:27 +0800</lastBuildDate><atom:link href="https://hanzhongzi.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>proxysql</title>
+        <link>https://hanzhongzi.github.io/tags/proxysql/</link>
+        <pubDate>Tue, 02 Jan 2024 16:55:27 +0800</pubDate>
         
-        <guid>https://hanzhongzi.github.io/tags/css/</guid>
+        <guid>https://hanzhongzi.github.io/tags/proxysql/</guid>
         <description></description>
         </item>
         <item>
-        <title>html</title>
-        <link>https://hanzhongzi.github.io/tags/html/</link>
-        <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+        <title>etcd</title>
+        <link>https://hanzhongzi.github.io/tags/etcd/</link>
+        <pubDate>Tue, 02 Jan 2024 16:55:17 +0800</pubDate>
         
-        <guid>https://hanzhongzi.github.io/tags/html/</guid>
+        <guid>https://hanzhongzi.github.io/tags/etcd/</guid>
         <description></description>
         </item>
         <item>
-        <title>markdown</title>
-        <link>https://hanzhongzi.github.io/tags/markdown/</link>
-        <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+        <title>ansible</title>
+        <link>https://hanzhongzi.github.io/tags/ansible/</link>
+        <pubDate>Thu, 18 Jul 2019 16:09:24 +0800</pubDate>
         
-        <guid>https://hanzhongzi.github.io/tags/markdown/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>themes</title>
-        <link>https://hanzhongzi.github.io/tags/themes/</link>
-        <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://hanzhongzi.github.io/tags/themes/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Example Tag</title>
-        <link>https://hanzhongzi.github.io/tags/example-tag/</link>
-        <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://hanzhongzi.github.io/tags/example-tag/</guid>
+        <guid>https://hanzhongzi.github.io/tags/ansible/</guid>
         <description></description>
         </item>
         

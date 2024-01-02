@@ -1,30 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Ansible 一篇搞定，快速学习
-一、特点 模块化： 调用特定的模块，完成特定的内容 使用 Paramiko(Python对于ssh的实现)，PyYAML,Jinja2(模板语言) 三个关键模块 支持自定义模块，可以使用任何语言编写 基于Python实现 不是简单，基于Python和SSH,无agent，无需代理，不依赖PKI(无需SSL) 安全，基于OpenSSH 幂等性：一个任务执行一遍和N边结果是一样的（要注意代码逻辑） 支持playbook编排任务，YAML格式，编排任务，支持丰富的数据机构 较强大的role的多层解决方案 二、架构 1 2 3 4 5 用户/PLAYBOOK =&amp;gt; INVENTORY/API/MODULES/PLUGINS =&amp;gt; HOSTS/NETWORK INVEMTORY: Ansible管理主机的清单 /etc/ansible/hosts MODULES: Ansible执行命令的功能模块、多数为内置核心模块，也可以自定义 PLUGINS: 模块功能的补充，如连接类型插件、循环插件、变量插件、过滤插件等 API: 供第三方程序调用的应用程序接口 用户直接使用命令或者使用 Playbook 或者 调用API 去远程主机执行命令 三、注意事项 执行ansible的主机一般称为主控端，中控，master或堡垒机 主控段python需要在2.6或以上 被控端python版本小鱼2.4的需要安装 python-simplejson windows不能作为主控 四、安装 epel源rpm包安装 sudo yum -y install epel-release &amp;amp;&amp;amp; sudo yum -y install ansible
-官方其他安装方式
-查看安装版本和命令
-1 2 3 4 5 6 7 8 ansible --version ansible 2.'>
-<title>Ansible</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Ansible 介绍和基本操作'>
+<title>Ansible 一篇文章搞定</title>
 
-<link rel='canonical' href='https://hanzhongzi.github.io/p/ansible/'>
+<link rel='canonical' href='https://hanzhongzi.github.io/p/ansible-%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E6%90%9E%E5%AE%9A/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Ansible'>
-<meta property='og:description' content='Ansible 一篇搞定，快速学习
-一、特点 模块化： 调用特定的模块，完成特定的内容 使用 Paramiko(Python对于ssh的实现)，PyYAML,Jinja2(模板语言) 三个关键模块 支持自定义模块，可以使用任何语言编写 基于Python实现 不是简单，基于Python和SSH,无agent，无需代理，不依赖PKI(无需SSL) 安全，基于OpenSSH 幂等性：一个任务执行一遍和N边结果是一样的（要注意代码逻辑） 支持playbook编排任务，YAML格式，编排任务，支持丰富的数据机构 较强大的role的多层解决方案 二、架构 1 2 3 4 5 用户/PLAYBOOK =&amp;gt; INVENTORY/API/MODULES/PLUGINS =&amp;gt; HOSTS/NETWORK INVEMTORY: Ansible管理主机的清单 /etc/ansible/hosts MODULES: Ansible执行命令的功能模块、多数为内置核心模块，也可以自定义 PLUGINS: 模块功能的补充，如连接类型插件、循环插件、变量插件、过滤插件等 API: 供第三方程序调用的应用程序接口 用户直接使用命令或者使用 Playbook 或者 调用API 去远程主机执行命令 三、注意事项 执行ansible的主机一般称为主控端，中控，master或堡垒机 主控段python需要在2.6或以上 被控端python版本小鱼2.4的需要安装 python-simplejson windows不能作为主控 四、安装 epel源rpm包安装 sudo yum -y install epel-release &amp;amp;&amp;amp; sudo yum -y install ansible
-官方其他安装方式
-查看安装版本和命令
-1 2 3 4 5 6 7 8 ansible --version ansible 2.'>
-<meta property='og:url' content='https://hanzhongzi.github.io/p/ansible/'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Ansible 一篇文章搞定'>
+<meta property='og:description' content='Ansible 介绍和基本操作'>
+<meta property='og:url' content='https://hanzhongzi.github.io/p/ansible-%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E6%90%9E%E5%AE%9A/'>
 <meta property='og:site_name' content='Hugo Theme Stack Starter'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ansible' /><meta property='article:published_time' content='2024-01-02T16:09:24&#43;08:00'/><meta property='article:modified_time' content='2024-01-02T16:09:24&#43;08:00'/>
-<meta name="twitter:title" content="Ansible">
-<meta name="twitter:description" content="Ansible 一篇搞定，快速学习
-一、特点 模块化： 调用特定的模块，完成特定的内容 使用 Paramiko(Python对于ssh的实现)，PyYAML,Jinja2(模板语言) 三个关键模块 支持自定义模块，可以使用任何语言编写 基于Python实现 不是简单，基于Python和SSH,无agent，无需代理，不依赖PKI(无需SSL) 安全，基于OpenSSH 幂等性：一个任务执行一遍和N边结果是一样的（要注意代码逻辑） 支持playbook编排任务，YAML格式，编排任务，支持丰富的数据机构 较强大的role的多层解决方案 二、架构 1 2 3 4 5 用户/PLAYBOOK =&amp;gt; INVENTORY/API/MODULES/PLUGINS =&amp;gt; HOSTS/NETWORK INVEMTORY: Ansible管理主机的清单 /etc/ansible/hosts MODULES: Ansible执行命令的功能模块、多数为内置核心模块，也可以自定义 PLUGINS: 模块功能的补充，如连接类型插件、循环插件、变量插件、过滤插件等 API: 供第三方程序调用的应用程序接口 用户直接使用命令或者使用 Playbook 或者 调用API 去远程主机执行命令 三、注意事项 执行ansible的主机一般称为主控端，中控，master或堡垒机 主控段python需要在2.6或以上 被控端python版本小鱼2.4的需要安装 python-simplejson windows不能作为主控 四、安装 epel源rpm包安装 sudo yum -y install epel-release &amp;amp;&amp;amp; sudo yum -y install ansible
-官方其他安装方式
-查看安装版本和命令
-1 2 3 4 5 6 7 8 ansible --version ansible 2.">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ansible' /><meta property='article:published_time' content='2019-07-18T16:09:24&#43;08:00'/><meta property='article:modified_time' content='2019-07-18T16:09:24&#43;08:00'/>
+<meta name="twitter:title" content="Ansible 一篇文章搞定">
+<meta name="twitter:description" content="Ansible 介绍和基本操作">
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -318,9 +306,13 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/ansible/">Ansible</a>
+            <a href="/p/ansible-%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E6%90%9E%E5%AE%9A/">Ansible 一篇文章搞定</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            Ansible 介绍和基本操作
+        </h3>
         
     </div>
 
@@ -340,7 +332,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Jan 02, 2024</time>
+                <time class="article-time--published">Jul 18, 2019</time>
             </div>
         
 
@@ -1066,6 +1058,41 @@
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/proxysql-%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E6%90%9E%E5%AE%9A/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ProxySql 一篇文章搞定</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/etcd-%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E6%90%9E%E5%AE%9A/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Etcd 一篇文章搞定</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     
