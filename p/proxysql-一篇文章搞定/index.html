@@ -13,8 +13,6 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='proxysql' /><meta property='article:published_time' content='2024-01-02T16:55:27&#43;08:00'/><meta property='article:modified_time' content='2024-01-02T16:55:27&#43;08:00'/>
 <meta name="twitter:title" content="ProxySql 一篇文章搞定">
 <meta name="twitter:description" content="ProxySql 安装部署、配置">
-    <link rel="shortcut icon" href="/favicon.png" />
-
     </head>
     <body class="
     article-page
@@ -400,7 +398,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Jan 02, 2024</time>
+                <time class="article-time--published">Jan 29, 2019</time>
             </div>
         
 
@@ -2322,46 +2320,23 @@ query rules, servers, users 和proxysql servers 分别有admin-cluster_XXX_diffs
      
     
         
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script>
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
 <style>
-    .disqus-container {
+    .waline-container {
         background-color: var(--card-background);
         border-radius: var(--card-border-radius);
         box-shadow: var(--shadow-l1);
         padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
     }
-</style>
-
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (typeof DISQUS == 'object') {
-            DISQUS.reset({
-                reload: true
-            });
-        }
-    })
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["//unpkg.com/@waline/emojis@1.1.0/bilibili","//unpkg.com/@waline/emojis@1.1.0/weibo","cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji","cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/alus","cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq","cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba"],"locale":{"admin":"Admin","placeholder":"请文明发言哟 ヾ(≧▽≦*)o"},"pageview":true,"requiredMeta":["name","email","url"],"serverURL":"https://app-production-dfd0.up.railway.app"});
 </script>
 
     
