@@ -13,7 +13,7 @@
         <pubDate>Tue, 02 Jan 2024 16:55:27 +0800</pubDate>
         
         <guid>https://hanzhongzi.github.io/p/proxysql-%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E6%90%9E%E5%AE%9A/</guid>
-        <description>&lt;h1 id=&#34;proxysql&#34;&gt;ProxySQL&lt;/h1&gt;
+        <description>&lt;img src="https://hanzhongzi.github.io/cover.jpg" alt="Featured image of post ProxySql 一篇文章搞定" /&gt;&lt;h1 id=&#34;proxysql&#34;&gt;ProxySQL&lt;/h1&gt;
 &lt;p&gt;简单介绍: ProxySQL 是基于 MySQL 的一款开源的中间件的产品，是一个灵活的 MySQL 代理层，可以实现读写分离，支持 Query 路由功能，支持动态指定某个 SQL 进行缓存，支持动态加载（无需重启 ProxySQL 服务），故障切换和一些 SQL 的过滤功能。&lt;/p&gt;
 &lt;p&gt;github地址：https://github.com/sysown/proxysql/releases&lt;/p&gt;
 &lt;p&gt;官方文档: &lt;a class=&#34;link&#34; href=&#34;https://proxysql.com/documentation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

@@ -13,7 +13,7 @@
         <pubDate>Tue, 02 Jan 2024 16:55:17 +0800</pubDate>
         
         <guid>https://hanzhongzi.github.io/p/etcd-%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E6%90%9E%E5%AE%9A/</guid>
-        <description>&lt;h1 id=&#34;etcd&#34;&gt;etcd&lt;/h1&gt;
+        <description>&lt;img src="https://hanzhongzi.github.io/cover.jpg" alt="Featured image of post Etcd 一篇文章搞定" /&gt;&lt;h1 id=&#34;etcd&#34;&gt;etcd&lt;/h1&gt;
 &lt;p&gt;它的应用场景相当广泛，从服务发现到分布式锁，从配置存储到分布式协调等等。&lt;/p&gt;
 &lt;p&gt;etcd 已经成为了云原生和分布式系统的存储基石。&lt;/p&gt;
 &lt;p&gt;另外，etcd 作为最热门的云原生存储之一，在腾讯、阿里、Google、AWS、美团、字节跳动、拼多多、Shopee、明源云等公司都有大量的应用，覆盖的业务可不仅仅是 Kubernetes 相关的各类容器产品，更有视频、推荐、安全、游戏、存储、集群调度等核心业务。&lt;/p&gt;
