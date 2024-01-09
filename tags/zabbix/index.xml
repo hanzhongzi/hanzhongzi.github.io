@@ -103,13 +103,13 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1.在您按照官方文档导入数据表和基础数据后,首先在您命名的数据库中执行zabbix_alter_tables.sql中的SQL。
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;一.在您按照官方文档导入数据表和基础数据后,首先在您命名的数据库中执行zabbix_alter_tables.sql中的SQL。
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;目的是基于 clock 字段的值，将history, history_log, history_str, history_text, history_uint, trends, trends_uint表都被分成多个分区,每个分区都有一个特定的值范围。
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;分区的值范围是通过 UNIX_TIMESTAMP(DATE_FORMAT(DATE_SUB(CURDATE(), INTERVAL 1 YEAR), &amp;#39;%Y-%m-%d&amp;#39;)) 计算得到的。这表示每个分区的上限是当前日期一年前的某一天的 Unix 时间戳。
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;定一年前的某一天是为了不影响当前的数据，和待会儿测试删除分区。
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2.之后在您命名的数据库中执行zabbix_pratition_tables.sql中的SQL。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;二.之后在您命名的数据库中执行zabbix_pratition_tables.sql中的SQL。
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;这段 SQL 脚本是为上面说的那些大表分区管理设计的。让我们逐步解析这个脚本的关键部分：
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1.创建 manage_partitions 表：
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;此表创建用于跟踪不同表的分区管理方式。它包括字段，如表名、分区周期（每天或每月）、保留分区的时长（以天或月计）、最后一次更新分区的时间，以及额外的评论。

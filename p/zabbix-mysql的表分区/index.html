@@ -452,13 +452,13 @@
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">1.在您按照官方文档导入数据表和基础数据后,首先在您命名的数据库中执行zabbix_alter_tables.sql中的SQL。
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">一.在您按照官方文档导入数据表和基础数据后,首先在您命名的数据库中执行zabbix_alter_tables.sql中的SQL。
 </span></span><span class="line"><span class="cl">目的是基于 clock 字段的值，将history, history_log, history_str, history_text, history_uint, trends, trends_uint表都被分成多个分区,每个分区都有一个特定的值范围。
 </span></span><span class="line"><span class="cl">分区的值范围是通过 UNIX_TIMESTAMP(DATE_FORMAT(DATE_SUB(CURDATE(), INTERVAL 1 YEAR), &#39;%Y-%m-%d&#39;)) 计算得到的。这表示每个分区的上限是当前日期一年前的某一天的 Unix 时间戳。
 </span></span><span class="line"><span class="cl">定一年前的某一天是为了不影响当前的数据，和待会儿测试删除分区。
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">2.之后在您命名的数据库中执行zabbix_pratition_tables.sql中的SQL。
+</span></span><span class="line"><span class="cl">二.之后在您命名的数据库中执行zabbix_pratition_tables.sql中的SQL。
 </span></span><span class="line"><span class="cl">这段 SQL 脚本是为上面说的那些大表分区管理设计的。让我们逐步解析这个脚本的关键部分：
 </span></span><span class="line"><span class="cl">1.创建 manage_partitions 表：
 </span></span><span class="line"><span class="cl">此表创建用于跟踪不同表的分区管理方式。它包括字段，如表名、分区周期（每天或每月）、保留分区的时长（以天或月计）、最后一次更新分区的时间，以及额外的评论。
